@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+}
+
+.section{
+    margin-top:5px;
+    padding:1rem;
+    background-color:black;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    color:rgb(250, 204, 147);
+    margin-top:12px;
+    margin-bottom:10px;
+
+}
+
+
+.button{
+    background-color:transparent;
+    border:none;
+    width:48px;
+    height:48px;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items:center;
+    position:relative;
+}
+
+.menuicon,.menuicon::after,.menuicon::before{
+    background-color: whitesmoke;
+    width:40px;
+    height:5px;
+    border-radius:5px;
+    transform:all 0.3s;
+    position:absolute;
+}
+
+.menuicon::after,.menuicon::before{
+    content: "";
+}
+
+.menuicon::after{
+    transform: translate(-20px , 8px);
+}
+.menuicon::before{
+    transform:translate(-20px ,-8px);
+}
+
+nav{
+    display:none;
+}
+
+nav ul{
+    display:flex;
+    flex-flow:column nowrap;
+}
+
+nav li {
+    list-style-type: none;
+    padding:0.5rem;
+    display: block;
+    text-align:center;
+    border-top:2px solid rgb(3, 85, 162);
+    background-color:rgb(1, 1, 22);
+    
+}
+
+nav li:last-child{
+    border-bottom:2px solid rgb(3, 85, 162);   
+}
+
+nav a{
+    display:block;
+    width:80%;
+    margin:auto;
+    text-align:center;
+    text-decoration: none;
+}
+nav a:any-link{
+    text-decoration: none;
+    color:rgb(112, 77, 224);
+    font-weight:bold;
+}
+
+nav a:hover,nav a:focus{
+    transform:scale(1.2);
+    transform:all 0.3s;
+    background-color: aqua;
+    text-decoration: none;
+    color:rgb(44, 9, 237);
+}
+
+.menuicon:hover,.menuicon:focus{
+    background-color: transparent;
+    transform: rotate(720deg);
+    transition-timing-function:ease;
+}
+
+
+.menuicon:hover::after,.menuicon:focus::after{
+    transform:translateX(-20px) rotate(45deg);
+}
+.menuicon:hover::before,.menuicon:focus::before{
+    transform:translateX(-20px) rotate(-45deg);
+}
+
+:is(header:hover,header:focus) nav{
+    display:block;
+}
+
+
+
+.section h1::first-letter{
+    color:lightblue;
+}
+
+
+figcaption{
+    text-align:center;
+}
+
+.adv{
+    text-align: center;
+    background-color: hwb(211 1% 46%);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 50px;
+    color: white;
+}
+
+.adv:hover,.adv:focus{
+    transform:scale(1.1);
+
+}
+
+.p1{
+    max-width: 75%;
+    color:rgb(0, 0, 0);
+    background-color: rgb(199, 151, 255);
+    padding:1.5rem;
+    column-count: 2;
+    column-rule: 5px solid rgb(0, 0, 0);
+    border:10px solid whitesmoke;
+    border-radius:70px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.img{
+    display: float;
+    float: left;
+    width:20vw;
+    margin-right:10px;
+}
+
+.p2{
+    margin:30px;
+    line-height: 1.5rem;
+    background-image: linear-gradient(whitesmoke,lightgreen);
+    font-weight: bold;
+    word-spacing: normal;
+    padding:15px;
+    border-radius: 10px;
+    line-height:1.5rem;
+    margin-right:75px;
+    margin-left:75px;
+}
+
+.dis{
+    border: 2px solid rgb(10, 40, 71);
+    background-color: rgb(10, 40, 71);
+    text-align:center ;
+    border-radius:50px;
+    color: whitesmoke;
+}
+
+.dis:hover,.dis:focus{
+    transform:scale(1.1);
+}
+
+.img1{
+    
+    display: float;
+    float:left;
+    height:450px;
+    margin-left: 85px;
+    margin-right: 20px;
+    margin-top: 45px;
+    
+
+}
+
+.advantages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.methods h2 {
+    text-align: center;
+    /* border:4px solid  hwb(64 2% 66%); */
+    background-color: hwb(239 12% 25%);
+    color: wheat;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 50px;
+}
+
+
+.met:hover,.met:focus{
+    transform:scale(1.1);
+    color: rgb(21, 0, 121);
+}
+
+
+
+.img2{
+    display: float;
+    float:right;
+    height:350px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.methods{
+    border:2px solid lightblue;
+    padding:40px;
+    margin:30px;
+    margin-left:45px;
+    border-radius:50px;
+    background-image: radial-gradient(white,lightblue);
+}
+
+.p3{
+    color:black;
+    font-weight: bold;
+    line-height:1.5rem;
+    padding:15px;
+}
+
+
+.types{
+    margin:30px;
+    border-radius: 50px;
+    background-color: rgb(209, 168, 248);
+}
+
+
+.ty{
+    text-align: center;
+    /* border:4px solid  hwb(338 24% 3%); */
+    background-color: hwb(0 73% 1%);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 50px;
+    margin-right:20px;
+    margin-left:20px;
+}
+
+.ty:hover,.ty:focus{
+    transform:scale(1.1);
+    color: rgb(21, 0, 121);
+}
+
+
+.img3{
+    display: float;
+    float:left;
+    height:350px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+}
+
+
+footer{
+    bottom:0px;
+    width:100%;
+    background-color: black;
+    color: white;
+    padding-top: 1.5%;
+    padding-bottom: 1%;
+}
+
+.main-contents{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-contents{
+    flex-basis: 50%;
+    padding:10px 20px;
+}
+
+.box h2{
+    font-size: 1.125rem;
+    font-weight:600;
+    text-transform: uppercase;
+}
+
+.box  .contents{
+    margin:20px 0 0 0;
+    position:relative;
+    padding: 50px;
+    
+}
+
+.box .contents::before{
+    position: absolute;
+    content: " ";
+    top: -10px;
+    height: 2px;
+    width:100%;
+    background: #1a1a1a;
+}
+
+
+.box .contents:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: #f12020;
+    top: -10px;
+}
+.left .contents p{
+    text-align: justify;
+}
+
+.bottom center{
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: #151515;
+}
+.bottom center span{
+    color: #656565;
+}
+.bottom center a{
+    color: #f12020;
+    text-decoration: none;
+}
+.bottom center a:hover{
+    text-decoration: underline;
+}
+
+
+.main-sec{
+    background-image: url(water.jpg);
+}
